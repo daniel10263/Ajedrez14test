@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Club de Ajedrez AjedreZ14 | Zona 14, Guatemala</title>
+<meta name="description" content="Club de Ajedrez AjedreZ14 — Comunidad de ajedrez en Zona 14, Guatemala. Fomentamos el pensamiento lógico, disciplina y valores en la juventud.">
+<meta name="keywords" content="ajedrez Guatemala, club de ajedrez zona 14, ajedrez niños Guatemala, donar ajedrez, patrocinar club ajedrez, AjedreZ14, torneo ajedrez Guatemala, desarrollo cognitivo ajedrez">
+<meta property="og:title" content="Club de Ajedrez AjedreZ14">
+<meta property="og:description" content="El orden y la disciplina, eventualmente vencerán a la habilidad y a la inteligencia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gp:   #6DBE45;
+  --gd:   #2E7D32;
+  --gm:   #4CAF50;
+  --gdp:  #1B5E20;
+  --gl:   #A5D6A7;
+  --gpale:#E8F5E9;
+  --gtint:#F1FAF2;
+  --gold: #D4AF37;
+  --golk: #F0CD5A;
+  --golp: #FBF5DC;
+  --w:    #FFFFFF;
+  --g50:  #F9FAFB;
+  --g100: #F3F4F6;
+  --g200: #E5E7EB;
+  --g400: #9CA3AF;
+  --g600: #4B5563;
+  --g800: #1F2937;
+  --text: #1A2B1A;
+  --r:    8px;
+  --rl:   16px;
+  --sh:   0 4px 24px rgba(46,125,50,0.12);
+  --shl:  0 12px 48px rgba(46,125,50,0.18);
+  --shg:  0 8px 32px rgba(212,175,55,0.25);
+  --fd:   'Playfair Display', Georgia, serif;
+  --fb:   'Plus Jakarta Sans', sans-serif;
+  --tr:   0.3s cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--fb);color:var(--text);background:var(--w);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.page{display:none}
+.page.active{display:block}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(27,94,32,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(109,190,69,0.25);transition:var(--tr)}
+.navi{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:68px}
+.nlogo{display:flex;align-items:center;gap:12px;cursor:pointer}
+.nemb{width:40px;height:40px;background:linear-gradient(135deg,var(--gold),var(--golk));border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--gdp);flex-shrink:0;box-shadow:0 2px 12px rgba(212,175,55,0.4)}
+.ntxt{font-family:var(--fd);font-size:1.3rem;font-weight:700;color:var(--w);letter-spacing:.01em}
+.ntxt span{color:var(--golk)}
+.nlinks{display:flex;align-items:center;gap:2px;list-style:none}
+.nlinks a{display:block;padding:8px 15px;font-size:.875rem;font-weight:500;color:rgba(255,255,255,.80);border-radius:var(--r);transition:var(--tr);cursor:pointer}
+.nlinks a:hover,.nlinks a.active{color:var(--gp);background:rgba(109,190,69,.15)}
+.ncta{background:var(--gold)!important;color:var(--gdp)!important;font-weight:700!important;border-radius:var(--r)!important}
+.ncta:hover{background:var(--golk)!important;transform:translateY(-1px);box-shadow:var(--shg)!important}
+.hmbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hmbg span{display:block;width:24px;height:2px;background:var(--w);border-radius:2px;transition:var(--tr)}
+.mmenu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--gdp);z-index:999;padding:16px 24px 28px;border-bottom:2px solid rgba(109,190,69,.3)}
+.mmenu.open{display:block;animation:sdown .25s ease}
+.mmenu a{display:block;padding:15px 0;color:rgba(255,255,255,.85);font-size:1rem;font-weight:500;border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer;transition:var(--tr)}
+.mmenu a:last-child{border-bottom:none}
+.mmenu a:hover{color:var(--gp);padding-left:8px}
+@keyframes sdown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+
+/* SHARED */
+.con{max-width:1200px;margin:0 auto;padding:0 24px}
+.sec{padding:96px 0}
+.lbl{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gd);margin-bottom:14px}
+.lbl::before{content:'';display:inline-block;width:20px;height:2px;background:var(--gp);border-radius:2px}
+.lbl.lt{color:var(--gl)}
+.lbl.lt::before{background:var(--gp)}
+.lbl.gld{color:var(--gold)}
+.lbl.gld::before{background:var(--gold)}
+.div{display:flex;align-items:center;gap:10px;margin:22px 0}
+.div::before{content:'';display:block;width:48px;height:3px;background:linear-gradient(90deg,var(--gp),var(--gm));border-radius:2px}
+.div::after{content:'✦';font-size:.6rem;color:var(--gold)}
+.hsc{font-family:var(--fd);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--text);line-height:1.15;margin-bottom:16px}
+.hsc.lt{color:var(--w)}
+.hsc em{color:var(--gp);font-style:normal}
+.lead{font-size:1.05rem;color:var(--g600);max-width:620px;line-height:1.8}
+.lead.lt{color:rgba(255,255,255,.72)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 30px;border-radius:var(--r);font-family:var(--fb);font-size:.88rem;font-weight:700;cursor:pointer;border:2px solid transparent;letter-spacing:.03em;transition:var(--tr)}
+.bpri{background:var(--gp);color:var(--w);border-color:var(--gp)}
+.bpri:hover{background:var(--gm);border-color:var(--gm);transform:translateY(-2px);box-shadow:0 8px 28px rgba(109,190,69,.38)}
+.bdrk{background:var(--gdp);color:var(--w);border-color:var(--gdp)}
+.bdrk:hover{background:var(--gd);transform:translateY(-2px);box-shadow:var(--sh)}
+.bgld{background:var(--gold);color:var(--gdp);border-color:var(--gold)}
+.bgld:hover{background:var(--golk);border-color:var(--golk);transform:translateY(-2px);box-shadow:var(--shg)}
+.bout{background:transparent;color:var(--w);border-color:rgba(255,255,255,.4)}
+.bout:hover{border-color:var(--gp);color:var(--gp);transform:translateY(-2px)}
+.bgrn{background:transparent;color:var(--gd);border-color:var(--gp)}
+.bgrn:hover{background:var(--gp);color:var(--w);transform:translateY(-2px);box-shadow:0 6px 20px rgba(109,190,69,.3)}
+
+/* HERO */
+#hero{min-height:100vh;padding-top:68px;background:var(--gdp);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.hmesh{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 90% 70% at 65% 50%,rgba(46,125,50,.65) 0%,transparent 65%),radial-gradient(ellipse 50% 50% at 15% 80%,rgba(109,190,69,.12) 0%,transparent 60%),linear-gradient(145deg,#1B5E20 0%,#2E7D32 45%,#1a4a1e 100%)}
+.hlines{position:absolute;inset:0;z-index:0;opacity:.05;background-image:linear-gradient(rgba(109,190,69,.8) 1px,transparent 1px),linear-gradient(90deg,rgba(109,190,69,.8) 1px,transparent 1px);background-size:56px 56px}
+.hpiece{position:absolute;right:-80px;top:50%;transform:translateY(-50%);font-size:32vw;z-index:1;opacity:.04;line-height:1;color:var(--gl);animation:hfl 6s ease-in-out infinite}
+@keyframes hfl{0%,100%{transform:translateY(-50%) rotate(-3deg)}50%{transform:translateY(-54%) rotate(3deg)}}
+.hcon{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 24px;width:100%}
+.heyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(109,190,69,.15);border:1px solid rgba(109,190,69,.35);border-radius:40px;padding:7px 20px;margin-bottom:36px}
+.heyebrow span{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gp)}
+.hdot{width:6px;height:6px;border-radius:50%;background:var(--gp);animation:pls 2s ease-in-out infinite}
+@keyframes pls{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+.htitle{font-family:var(--fd);font-size:clamp(3rem,7.5vw,6.8rem);font-weight:800;color:var(--w);line-height:.98;margin-bottom:10px;letter-spacing:-.01em}
+.htitle .wg{color:var(--gp)}
+.htitle .wo{color:var(--gold)}
+.hmotto{font-family:var(--fd);font-size:clamp(.95rem,2vw,1.25rem);font-style:italic;font-weight:600;color:rgba(255,255,255,.5);margin-bottom:28px;max-width:560px;line-height:1.55}
+.hmotto em{color:var(--gl);font-style:normal}
+.hdesc{font-size:1.05rem;color:rgba(255,255,255,.70);max-width:540px;margin-bottom:44px;line-height:1.8}
+.hact{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:64px}
+.hstrip{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid rgba(109,190,69,.25);padding-top:36px}
+.hstat{flex:1;min-width:120px;padding:0 32px 0 0;border-right:1px solid rgba(109,190,69,.18)}
+.hstat:last-child{border-right:none}
+.hstat:first-child{padding-left:0}
+.stn{font-family:var(--fd);font-size:2.6rem;font-weight:800;color:var(--gp);line-height:1}
+.stl{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;margin-top:4px;line-height:1.3}
+
+/* PAGE HERO (inner pages) */
+.phero{min-height:46vh;padding-top:68px;display:flex;align-items:flex-end;position:relative;overflow:hidden}
+.phbg{position:absolute;inset:0;background:linear-gradient(155deg,#1B5E20 0%,#2E7D32 55%,#1a4a1e 100%)}
+.phpat{position:absolute;inset:0;opacity:.06;background-image:linear-gradient(rgba(109,190,69,1) 1px,transparent 1px),linear-gradient(90deg,rgba(109,190,69,1) 1px,transparent 1px);background-size:50px 50px}
+.phdco{position:absolute;right:-40px;bottom:-40px;font-size:20rem;opacity:.04;color:var(--gp);line-height:1}
+.phcon{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 24px 56px;width:100%}
+.phcon h1{font-family:var(--fd);font-size:clamp(2.4rem,5vw,3.8rem);color:var(--w);font-weight:800;margin-bottom:16px;line-height:1.1}
+.phcon h1 em{color:var(--gp);font-style:normal}
+.phcon p{color:rgba(255,255,255,.6);font-size:1rem;max-width:520px;line-height:1.7}
+
+/* INTRO 2-col */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+
+/* PHOTO FRAME */
+.pframe{position:relative;aspect-ratio:4/3;border-radius:var(--rl);overflow:hidden;background:linear-gradient(140deg,var(--gd) 0%,var(--gm) 60%,var(--gp) 100%);box-shadow:var(--shl)}
+.pph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px}
+.pph .ico{font-size:5rem;opacity:.2}
+.pph .lbl2{font-size:.75rem;color:rgba(255,255,255,.35);text-align:center;font-style:italic;line-height:1.5}
+.pbadge{position:absolute;bottom:-20px;right:-20px;background:var(--gold);border-radius:var(--rl);padding:20px 24px;box-shadow:var(--shg);min-width:130px;text-align:center}
+.pbadge .bn{font-family:var(--fd);font-size:2.4rem;font-weight:800;color:var(--gdp);line-height:1}
+.pbadge .bl{font-size:.7rem;font-weight:700;color:var(--gdp);opacity:.7;text-transform:uppercase;letter-spacing:.08em;line-height:1.3;margin-top:2px}
+
+/* BENEFITS */
+#benefits{padding:96px 0;background:var(--gtint)}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.bcard{background:var(--w);border-radius:var(--rl);padding:36px 28px;border:1.5px solid var(--g200);position:relative;overflow:hidden;transition:var(--tr);cursor:default}
+.bcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gp),var(--gm));transform:scaleX(0);transform-origin:left;transition:var(--tr)}
+.bcard:hover::after{transform:scaleX(1)}
+.bcard:hover{transform:translateY(-6px);box-shadow:var(--shl);border-color:var(--gl)}
+.bico{width:52px;height:52px;background:var(--gpale);border:1.5px solid var(--gl);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;transition:var(--tr)}
+.bcard:hover .bico{background:var(--gp);border-color:var(--gp)}
+.bcard h3{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:10px}
+.bcard p{font-size:.88rem;color:var(--g600);line-height:1.7}
+
+/* GALLERY */
+#gallery{padding:80px 0;background:var(--gd);position:relative;overflow:hidden}
+.gbg{position:absolute;inset:0;background:linear-gradient(160deg,var(--gdp) 0%,var(--gd) 60%,#1f4a22 100%)}
+.ghead{position:relative;z-index:2;text-align:center;margin-bottom:48px}
+.ggrid{position:relative;z-index:2;display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:14px}
+.gcell{border-radius:var(--rl);background:rgba(255,255,255,.05);border:1px solid rgba(109,190,69,.15);display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:.45;position:relative;overflow:hidden;transition:var(--tr)}
+.gcell:hover{opacity:1;border-color:rgba(109,190,69,.5);transform:scale(1.01)}
+.gcell:first-child{grid-row:span 2}
+.gclbl{position:absolute;bottom:12px;left:16px;font-size:.68rem;color:rgba(255,255,255,.3);font-style:italic}
+
+/* DONATE CTA BAND */
+#dcta{padding:96px 0;background:var(--gp);position:relative;overflow:hidden}
+.dcbg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 80% 50%,rgba(46,125,50,.5) 0%,transparent 60%)}
+.dcpat{position:absolute;inset:0;background-image:repeating-conic-gradient(rgba(255,255,255,.04) 0% 25%,transparent 0% 50%);background-size:40px 40px}
+.dcin{position:relative;z-index:2;text-align:center;max-width:740px;margin:0 auto}
+.dcin h2{font-family:var(--fd);font-size:clamp(2rem,4.5vw,3.2rem);color:var(--w);font-weight:800;margin-bottom:20px;line-height:1.15}
+.dcin h2 span{color:var(--gold)}
+.dcin p{color:rgba(255,255,255,.82);font-size:1.05rem;margin-bottom:40px;line-height:1.8}
+.cbtns{display:flex;justify-content:center;flex-wrap:wrap;gap:16px}
+
+/* SPONSORS */
+#sponsors{padding:80px 0;background:var(--w)}
+.spin{text-align:center}
+.srow{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-bottom:40px;margin-top:40px}
+.sslot{width:150px;height:72px;border:2px dashed var(--g200);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:var(--g400);font-size:.72rem;font-style:italic;text-align:center;transition:var(--tr);cursor:pointer}
+.sslot:hover{border-color:var(--gp);color:var(--gd);background:var(--gpale)}
+
+/* MVV */
+#mvv{padding:96px 0;background:var(--w)}
+.mvvg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.mvvc{padding:40px 30px;border-radius:var(--rl);background:var(--gtint);border:1.5px solid var(--gpale);border-top:4px solid var(--gp);transition:var(--tr)}
+.mvvc:hover{box-shadow:var(--sh);border-top-color:var(--gold)}
+.mvvc .mi{font-size:2rem;margin-bottom:16px}
+.mvvc h3{font-family:var(--fd);font-size:1.45rem;font-weight:700;color:var(--gdp);margin-bottom:14px}
+.mvvc p{font-size:.9rem;color:var(--g600);line-height:1.75}
+
+/* STORY */
+#story{padding:96px 0;background:var(--g50)}
+.stg{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.stt h2{margin-bottom:14px}
+.stt p{color:var(--g600);line-height:1.85;margin-bottom:18px;font-size:.97rem}
+
+/* MOTTO */
+#motto{padding:96px 0;background:var(--gdp);position:relative;overflow:hidden;text-align:center}
+.mdcr{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(46,125,50,.5) 0%,transparent 70%)}
+.mche::before,.mche::after{content:'♟';position:absolute;font-size:18rem;opacity:.025;color:var(--gp);animation:hfl 8s ease-in-out infinite}
+.mche::before{left:-5%;top:-20%}
+.mche::after{right:-5%;bottom:-20%;animation-delay:-4s}
+.minn{position:relative;z-index:2;max-width:860px;margin:0 auto;padding:0 24px}
+.mtop{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:40px}
+.mline{flex:1;height:1px;background:rgba(109,190,69,.3);max-width:120px}
+.mpiec{font-size:1.8rem;opacity:.6;color:var(--gp)}
+.mquo{font-family:var(--fd);font-size:clamp(1.6rem,3.8vw,2.8rem);font-weight:700;font-style:italic;color:var(--w);line-height:1.3;margin-bottom:32px}
+.mquo em{color:var(--gp);font-style:normal}
+.mquo strong{color:var(--gold);font-style:normal}
+.mby{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.mdesc{margin-top:28px;color:rgba(255,255,255,.48);font-size:.9rem;line-height:1.75;max-width:520px;margin-left:auto;margin-right:auto}
+
+/* VALUES */
+#values{padding:96px 0;background:var(--w)}
+.valg{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:52px}
+.valc{display:flex;gap:20px;align-items:flex-start;padding:28px;border-radius:var(--rl);border:1.5px solid var(--g200);transition:var(--tr)}
+.valc:hover{border-color:var(--gp);background:var(--gtint);box-shadow:0 4px 20px rgba(109,190,69,.12)}
+.vnum{font-family:var(--fd);font-size:2.8rem;font-weight:800;color:var(--gpale);line-height:1;flex-shrink:0;width:52px}
+.valc:hover .vnum{color:var(--gl)}
+.vbod h4{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.vbod p{font-size:.88rem;color:var(--g600);line-height:1.7}
+
+/* IMPACT */
+#impd{padding:96px 0;background:var(--w)}
+.iblo{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.iblk{display:flex;gap:22px;align-items:flex-start;background:var(--gtint);border:1.5px solid var(--gpale);border-radius:var(--rl);padding:36px 30px;transition:var(--tr)}
+.iblk:hover{border-color:var(--gp);box-shadow:0 6px 24px rgba(109,190,69,.14);transform:translateY(-3px)}
+.iico{flex-shrink:0;width:50px;height:50px;background:var(--gp);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.35rem;box-shadow:0 4px 12px rgba(109,190,69,.35)}
+.iblk h3{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:var(--gdp);margin-bottom:10px}
+.iblk p{font-size:.88rem;color:var(--g600);line-height:1.75}
+
+/* COMMUNITY */
+#comm{padding:96px 0;background:var(--gd);position:relative;overflow:hidden}
+.cmbg{position:absolute;inset:0;background:linear-gradient(145deg,#1B5E20 0%,#2E7D32 100%)}
+.cmg{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:2}
+.csg{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.csc{background:rgba(255,255,255,.06);border:1px solid rgba(109,190,69,.25);border-radius:var(--rl);padding:28px;transition:var(--tr)}
+.csc:hover{background:rgba(109,190,69,.12);border-color:rgba(109,190,69,.5)}
+.csn{font-family:var(--fd);font-size:2.8rem;font-weight:800;color:var(--gp);line-height:1;margin-bottom:8px}
+.csl{font-size:.78rem;color:rgba(255,255,255,.5);font-weight:500;line-height:1.4}
+
+/* TESTIMONIALS */
+#testi{padding:96px 0;background:var(--g50)}
+.tesw{max-width:800px;margin:0 auto}
+.tesc{background:var(--w);border-radius:var(--rl);padding:44px;border:1.5px solid var(--g200);border-left:5px solid var(--gp);margin-bottom:24px;transition:var(--tr)}
+.tesc:hover{box-shadow:var(--sh);border-left-color:var(--gold)}
+.tqico{font-family:var(--fd);font-size:3.5rem;line-height:.6;color:var(--gpale);margin-bottom:16px;display:block}
+.tesc p{font-family:var(--fd);font-size:1.1rem;font-style:italic;color:var(--text);line-height:1.75;margin-bottom:20px}
+.tau{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--g400)}
+
+/* VISION */
+#vision{padding:96px 0;background:var(--gp);text-align:center;position:relative;overflow:hidden}
+.vme{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(46,125,50,.6) 0%,transparent 65%)}
+.vct{position:absolute;inset:0;background-image:repeating-conic-gradient(rgba(255,255,255,.04) 0% 25%,transparent 0% 50%);background-size:40px 40px}
+.vin{position:relative;z-index:2;max-width:720px;margin:0 auto;padding:0 24px}
+.troph{font-size:4rem;margin-bottom:24px;display:block;animation:hfl 3s ease-in-out infinite}
+.vin h2{color:var(--w);margin-bottom:20px}
+.vin p{color:rgba(255,255,255,.82);font-size:1.05rem;margin-bottom:16px;line-height:1.8}
+.vbtns{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:40px}
+
+/* WHY DONATE */
+#whyd{padding:96px 0;background:var(--w)}
+.whyg{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.whyt h2{margin-bottom:14px}
+.whyt>p{color:var(--g600);line-height:1.85;margin-bottom:18px;font-size:.97rem}
+.wlist{list-style:none;margin:24px 0 32px}
+.wlist li{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--g200);font-size:.9rem;color:var(--g600)}
+.wlist li:last-child{border-bottom:none}
+.wchk{width:22px;height:22px;flex-shrink:0;background:var(--gpale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;color:var(--gd);margin-top:1px;font-weight:700}
+.tbox{background:var(--gpale);border:1.5px solid var(--gl);border-radius:var(--rl);padding:28px;margin-top:24px}
+.tbox p{font-family:var(--fd);font-style:italic;color:var(--gdp);font-size:1.02rem;line-height:1.65}
+.tbox .tsig{font-style:normal;font-size:.75rem;font-family:var(--fb);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gd);opacity:.65;margin-top:10px;display:block}
+
+/* PLATFORMS */
+#plat{padding:80px 0;background:var(--g50)}
+.platg{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px;max-width:740px;margin-left:auto;margin-right:auto}
+.platc{background:var(--w);border-radius:var(--rl);padding:40px 32px;text-align:center;border:2px solid var(--g200);transition:var(--tr)}
+.platc:hover{border-color:var(--gp);box-shadow:var(--shl);transform:translateY(-4px)}
+.plogo{font-size:3rem;margin-bottom:16px}
+.platc h3{font-family:var(--fd);font-size:1.4rem;color:var(--text);margin-bottom:8px}
+.platc p{font-size:.84rem;color:var(--g600);margin-bottom:24px;line-height:1.6}
+
+/* TIERS */
+#tiers{padding:96px 0;background:var(--w)}
+.tierh{text-align:center;max-width:640px;margin:0 auto 60px}
+.tierg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+.tierc{border-radius:var(--rl);padding:40px 30px;border:2px solid var(--g200);position:relative;overflow:hidden;transition:var(--tr)}
+.tierc:hover{transform:translateY(-4px);box-shadow:var(--shl)}
+.tierc.feat{border-color:var(--gp);background:linear-gradient(175deg,var(--gtint) 0%,var(--w) 100%);transform:scale(1.02)}
+.tierc.feat:hover{transform:scale(1.02) translateY(-4px)}
+.tpop{position:absolute;top:18px;right:18px;background:var(--gp);color:var(--w);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+.tmed{font-size:2.2rem;margin-bottom:12px}
+.tnam{font-family:var(--fd);font-size:1.55rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.tpri{font-family:var(--fd);font-size:2.6rem;font-weight:800;color:var(--gd);line-height:1}
+.tper{font-size:.78rem;color:var(--g400);margin-bottom:24px;margin-top:4px}
+.tfl{list-style:none;margin-bottom:32px}
+.tfl li{display:flex;align-items:flex-start;gap:10px;font-size:.86rem;color:var(--g600);padding:8px 0;border-bottom:1px solid var(--g200);line-height:1.45}
+.tfl li:last-child{border-bottom:none}
+.tck{width:18px;height:18px;flex-shrink:0;background:var(--gpale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--gd);font-weight:700;margin-top:1px}
+.tcubox{background:linear-gradient(135deg,var(--gd),var(--gdp));border-radius:var(--rl);padding:40px;margin-top:40px;text-align:center}
+.tcubox h3{font-family:var(--fd);color:var(--w);font-size:1.6rem;margin-bottom:12px}
+.tcubox p{color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.7}
+
+/* TRUST */
+#trust{padding:80px 0;background:var(--gtint)}
+.trustg{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.triti{text-align:center;padding:36px 24px;background:var(--w);border-radius:var(--rl);border:1.5px solid var(--gpale);transition:var(--tr)}
+.triti:hover{border-color:var(--gp);box-shadow:var(--sh)}
+.trico{font-size:2.5rem;margin-bottom:16px;display:block}
+.triti h4{font-family:var(--fd);font-size:1.15rem;color:var(--gdp);margin-bottom:8px}
+.triti p{font-size:.85rem;color:var(--g600);line-height:1.65}
+
+/* CONTACT */
+#contm{padding:96px 0;background:var(--w)}
+.contg{display:grid;grid-template-columns:1fr 1.3fr;gap:72px;align-items:start}
+.citem{display:flex;gap:18px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--g200)}
+.citem:last-of-type{border-bottom:none}
+.cico{width:46px;height:46px;flex-shrink:0;background:var(--gpale);border:1.5px solid var(--gl);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+.ctxt h4{font-family:var(--fd);font-size:1.02rem;color:var(--text);margin-bottom:4px}
+.ctxt p{font-size:.88rem;color:var(--g600);line-height:1.55}
+.fvb{background:var(--gtint);border:1.5px solid var(--gl);border-radius:var(--rl);padding:24px;margin-top:28px}
+.fvb h4{font-family:var(--fd);font-size:1.02rem;color:var(--gdp);margin-bottom:8px}
+.fvb p{font-size:.86rem;color:var(--g600);line-height:1.7}
+.fwrap{background:var(--g50);border:1.5px solid var(--g200);border-radius:var(--rl);padding:48px}
+.fwrap h3{font-family:var(--fd);font-size:1.6rem;color:var(--text);margin-bottom:6px}
+.fwrap>p{font-size:.88rem;color:var(--g600);margin-bottom:32px;line-height:1.6}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-size:.78rem;font-weight:700;color:var(--gd);margin-bottom:7px;letter-spacing:.05em;text-transform:uppercase}
+.fg input,.fg textarea,.fg select{width:100%;padding:12px 16px;border:2px solid var(--g200);border-radius:var(--r);font-family:var(--fb);font-size:.92rem;color:var(--text);background:var(--w);transition:var(--tr);outline:none}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--gp);box-shadow:0 0 0 3px rgba(109,190,69,.15)}
+.fg textarea{resize:vertical;min-height:120px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#fsuc{background:var(--gpale);border:1.5px solid var(--gl);border-radius:var(--r);padding:16px;margin-top:16px;text-align:center;display:none}
+#fsuc p{color:var(--gdp);font-weight:700}
+
+/* MAP */
+.maph{height:320px;background:linear-gradient(145deg,var(--gd) 0%,var(--gdp) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.maph .me{font-size:3rem;opacity:.5}
+.maph p{color:rgba(255,255,255,.45);font-size:.9rem;font-style:italic}
+.maph a{color:var(--gp);font-size:.85rem;text-decoration:underline;cursor:pointer}
+
+/* WA */
+#wacta{padding:80px 0;background:var(--gd);text-align:center}
+.wain{max-width:580px;margin:0 auto}
+.wain h2{font-family:var(--fd);color:var(--w);font-size:clamp(1.8rem,3.5vw,2.5rem);margin-bottom:16px}
+.wain p{color:rgba(255,255,255,.62);margin-bottom:36px;line-height:1.75}
+.bwa{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:var(--w);padding:15px 36px;border-radius:var(--r);font-weight:700;font-size:1rem;border:none;cursor:pointer;transition:var(--tr)}
+.bwa:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.35)}
+
+/* SOCIAL */
+#social{padding:64px 0;background:var(--w);text-align:center}
+.sorow{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:32px}
+.sobt{display:flex;align-items:center;gap:8px;padding:11px 22px;border-radius:var(--r);border:2px solid var(--g200);font-size:.86rem;font-weight:600;color:var(--g600);cursor:pointer;transition:var(--tr)}
+.sobt:hover{border-color:var(--gp);background:var(--gtint);color:var(--gd)}
+
+/* FOOTER */
+footer{background:var(--gdp);border-top:1px solid rgba(109,190,69,.2);padding:64px 0 32px}
+.footg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.fbrand p{color:rgba(255,255,255,.45);font-size:.84rem;line-height:1.8;margin:14px 0}
+.fcol h4{font-family:var(--fd);font-size:.95rem;font-weight:700;color:var(--gp);margin-bottom:20px;letter-spacing:.04em}
+.fcol ul{list-style:none}
+.fcol ul li{margin-bottom:10px}
+.fcol ul li a{font-size:.84rem;color:rgba(255,255,255,.45);cursor:pointer;transition:var(--tr)}
+.fcol ul li a:hover{color:var(--gp);padding-left:4px}
+.fbot{border-top:1px solid rgba(255,255,255,.07);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.fbot p{font-size:.78rem;color:rgba(255,255,255,.28)}
+.fmot{font-family:var(--fd);font-style:italic;font-size:.85rem;color:var(--gp)}
+
+/* ANIMATIONS */
+@keyframes fup{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.au{animation:fup .65s ease both}
+.au1{animation:fup .65s .10s ease both}
+.au2{animation:fup .65s .20s ease both}
+.au3{animation:fup .65s .30s ease both}
+.au4{animation:fup .65s .40s ease both}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .g2,.stg,.whyg,.contg,.cmg{grid-template-columns:1fr;gap:40px}
+  .bgrid{grid-template-columns:1fr 1fr}
+  .mvvg{grid-template-columns:1fr}
+  .iblo{grid-template-columns:1fr}
+  .tierg{grid-template-columns:1fr}
+  .tierc.feat{transform:none}
+  .trustg{grid-template-columns:1fr}
+  .valg{grid-template-columns:1fr}
+  .footg{grid-template-columns:1fr 1fr}
+  .nlinks{display:none}
+  .hmbg{display:flex}
+  .hpiece{display:none}
+  .pbadge{display:none}
+}
+@media(max-width:640px){
+  .sec{padding:64px 0}
+  .bgrid{grid-template-columns:1fr}
+  .ggrid{grid-template-columns:1fr 1fr}
+  .gcell:first-child{grid-row:span 1}
+  .hstrip{gap:20px}
+  .hstat{padding:0 20px 0 0}
+  .frow{grid-template-columns:1fr}
+  .footg{grid-template-columns:1fr;gap:28px}
+  .fbot{flex-direction:column;text-align:center}
+  .fwrap{padding:28px 20px}
+  .platg{grid-template-columns:1fr}
+  .csg{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="navi">
+    <div class="nlogo" onclick="showPage('home')">
+      <div class="nemb">♟</div>
+      <span class="ntxt">Ajedre<span>Z14</span></span>
+    </div>
+    <ul class="nlinks">
+      <li><a onclick="showPage('home')"      data-page="home">Inicio</a></li>
+      <li><a onclick="showPage('about')"     data-page="about">Nosotros</a></li>
+      <li><a onclick="showPage('impact')"    data-page="impact">Impacto</a></li>
+      <li><a onclick="showPage('donations')" data-page="donations">Donar</a></li>
+      <li><a onclick="showPage('contact')"   data-page="contact">Contacto</a></li>
+      <li><a onclick="showPage('donations')" class="ncta">♟ Apoyar al Club</a></li>
+    </ul>
+    <button class="hmbg" onclick="toggleMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mmenu" id="mmenu">
+  <a onclick="navGo('home')">Inicio</a>
+  <a onclick="navGo('about')">Quiénes Somos</a>
+  <a onclick="navGo('impact')">Impacto</a>
+  <a onclick="navGo('donations')">Donaciones y Patrocinios</a>
+  <a onclick="navGo('contact')">Contacto</a>
+</div>
+
+
+<!-- =================== PAGE: HOME =================== -->
+<div class="page active" id="page-home">
+
+  <section id="hero">
+    <div class="hmesh"></div>
+    <div class="hlines"></div>
+    <div class="hpiece">♟</div>
+    <div class="hcon">
+      <div class="heyebrow au">
+        <div class="hdot"></div>
+        <span>Zona 14 · Guatemala City · Club Activo</span>
+      </div>
+      <h1 class="htitle au1">
+        Cada<br>
+        <span class="wg">Movimiento</span><br>
+        <span class="wo">Cambia Vidas</span>
+      </h1>
+      <p class="hmotto au2"><em>"El orden y la disciplina, eventualmente vencerán a la habilidad y a la inteligencia."</em></p>
+      <p class="hdesc au3">Somos la comunidad de ajedrez de la Zona 14 comprometida con el desarrollo cognitivo, los valores y el futuro de Guatemala — un tablero a la vez.</p>
+      <div class="hact au4">
+        <button class="btn bgld" onclick="showPage('donations')">♟ Hacer una Donación</button>
+        <button class="btn bpri" onclick="showPage('donations')">Ser Patrocinador</button>
+        <button class="btn bout" onclick="showPage('contact')">Únete al Club</button>
+      </div>
+      <div class="hstrip au4">
+        <div class="hstat"><div class="stn">50+</div><div class="stl">Jugadores<br>activos</div></div>
+        <div class="hstat"><div class="stn">52</div><div class="stl">Sesiones<br>por año</div></div>
+        <div class="hstat"><div class="stn">2</div><div class="stl">Torneos mundiales<br>en la mira</div></div>
+        <div class="hstat"><div class="stn">100%</div><div class="stl">Sin fines<br>de lucro</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:var(--w)">
+    <div class="con">
+      <div class="g2">
+        <div style="position:relative">
+          <div class="pframe">
+            <div class="pph"><div class="ico">♟</div><p class="lbl2">[ Fotografía: jóvenes del club jugando ajedrez en La Noria ]</p></div>
+          </div>
+          <div class="pbadge"><div class="bn">Z14</div><div class="bl">Zona 14<br>Guatemala</div></div>
+        </div>
+        <div>
+          <span class="lbl">Quiénes Somos</span>
+          <h2 class="hsc">Una comunidad unida por el <em>poder del ajedrez</em></h2>
+          <div class="div"></div>
+          <p style="color:var(--g600);line-height:1.85;margin-bottom:18px;font-size:.97rem">El Club AjedreZ14 somos una vibrante comunidad que promueve la práctica y difusión del ajedrez en la Zona 14, comprometidos con el bienestar de nuestros vecinos y el beneficio de nuestra sociedad.</p>
+          <p style="color:var(--g600);line-height:1.85;margin-bottom:18px;font-size:.97rem">Nos reunimos semanalmente cada <strong style="color:var(--gdp)">martes a las 17:00 horas</strong> en el <strong style="color:var(--gdp)">Centro Comercial La Noria</strong>, creando un espacio seguro, estimulante y lleno de oportunidades para quienes deseen desarrollar su mente y carácter.</p>
+          <p style="color:var(--g600);line-height:1.85;font-size:.97rem">Somos una organización sin fines de lucro. Todo lo que recibimos, lo reinvertimos directamente en nuestra comunidad y en el futuro de Guatemala.</p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+            <button class="btn bdrk" onclick="showPage('about')">Conoce Nuestra Historia</button>
+            <button class="btn bgrn" onclick="showPage('contact')">Visítanos →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits">
+    <div class="con">
+      <div style="max-width:680px;margin-bottom:56px">
+        <span class="lbl">Por Qué el Ajedrez</span>
+        <h2 class="hsc">El ajedrez desarrolla más que <em>grandes jugadores</em></h2>
+        <div class="div"></div>
+        <p class="lead">Una disciplina milenaria que es herramienta clave para el desarrollo cognitivo, emocional y estratégico de nuestra juventud.</p>
+      </div>
+      <div class="bgrid">
+        <div class="bcard"><div class="bico">🧠</div><h3>Pensamiento Lógico y Planificación</h3><p>El ajedrez exige analizar múltiples variables y anticipar consecuencias a largo plazo, entrenando la mente para resolver problemas complejos de forma estructurada.</p></div>
+        <div class="bcard"><div class="bico">🎯</div><h3>Concentración y Resiliencia Mental</h3><p>Una partida demanda foco sostenido y la capacidad de recuperarse ante la adversidad — habilidades que los jóvenes transfieren directamente al aula y a la vida.</p></div>
+        <div class="bcard"><div class="bico">⚡</div><h3>Decisiones Bajo Presión</h3><p>Decidir con información incompleta y en tiempo limitado forja un carácter seguro y analítico que marca la diferencia en el futuro profesional de cualquier joven.</p></div>
+        <div class="bcard"><div class="bico">🤝</div><h3>Valores y Respeto</h3><p>El ajedrez enseña la importancia de respetar las reglas, al adversario y los propios límites — pilares fundamentales de un ciudadano íntegro y responsable.</p></div>
+        <div class="bcard"><div class="bico">🌟</div><h3>Creatividad e Imaginación</h3><p>Las combinaciones infinitas del tablero estimulan el pensamiento divergente, nutriendo mentes capaces de encontrar soluciones originales a retos modernos.</p></div>
+        <div class="bcard"><div class="bico">🏆</div><h3>Disciplina y Constancia</h3><p>La mejora en ajedrez solo se logra con práctica regular y dedicación — lección invaluable que los jóvenes aplican en cada área de su desarrollo personal.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="gbg"></div>
+    <div class="con">
+      <div class="ghead">
+        <span class="lbl lt">Nuestra Comunidad</span>
+        <h2 class="hsc lt">El club <em>en acción</em></h2>
+        <p class="lead lt" style="margin:.8rem auto 0">Cada martes, el tablero cobra vida en La Noria.</p>
+      </div>
+      <div class="ggrid">
+        <div class="gcell">♜<span class="gclbl">[ Sesión grupal ]</span></div>
+        <div class="gcell">♟<span class="gclbl">[ Joven concentrado ]</span></div>
+        <div class="gcell">♞<span class="gclbl">[ Partida en progreso ]</span></div>
+        <div class="gcell">♛<span class="gclbl">[ Mentor y estudiante ]</span></div>
+        <div class="gcell">♝<span class="gclbl">[ La Noria, nuestro hogar ]</span></div>
+      </div>
+      <p style="text-align:center;margin-top:16px;font-size:.68rem;color:rgba(255,255,255,.2);font-style:italic">* Reemplazar con fotografías reales del club</p>
+    </div>
+  </section>
+
+  <section id="dcta">
+    <div class="dcbg"></div><div class="dcpat"></div>
+    <div class="con">
+      <div class="dcin">
+        <span class="lbl gld">Tú Puedes Marcar la Diferencia</span>
+        <h2>Un movimiento tuyo transforma el futuro de <span>un niño guatemalteco</span></h2>
+        <p>Tu donación o patrocinio financia materiales, inscripciones a torneos y programas de formación que abren puertas que de otra forma permanecerían cerradas.</p>
+        <div class="cbtns">
+          <button class="btn bgld" onclick="showPage('donations')">♟ Donar Ahora</button>
+          <button class="btn bdrk" onclick="showPage('donations')">Ver Tiers de Patrocinio</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsors">
+    <div class="con">
+      <div class="spin">
+        <span class="lbl">Aliados Estratégicos</span>
+        <h2 class="hsc">Nuestros <em>Patrocinadores</em></h2>
+        <p class="lead" style="margin:0 auto">Las organizaciones que creen en el poder del ajedrez para transformar comunidades.</p>
+        <div class="srow">
+          <div class="sslot">Tu Logo Aquí</div><div class="sslot">Tu Logo Aquí</div>
+          <div class="sslot">Tu Logo Aquí</div><div class="sslot">Tu Logo Aquí</div>
+          <div class="sslot">Tu Logo Aquí</div><div class="sslot">Tu Logo Aquí</div>
+        </div>
+        <button class="btn bdrk" onclick="showPage('donations')">Conviértete en Patrocinador →</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- =================== PAGE: ABOUT =================== -->
+<div class="page" id="page-about">
+  <div class="phero">
+    <div class="phbg"></div><div class="phpat"></div>
+    <div class="phdco">♟</div>
+    <div class="phcon">
+      <span class="lbl lt">Quiénes Somos</span>
+      <h1>Una historia de orden,<br>disciplina y <em>propósito</em></h1>
+      <p>Conoce al club que está cambiando el tablero de oportunidades para la juventud guatemalteca.</p>
+    </div>
+  </div>
+
+  <section class="sec" style="background:var(--w)">
+    <div class="con">
+      <div class="g2">
+        <div>
+          <span class="lbl">Nuestra Esencia</span>
+          <h2 class="hsc">Somos más que un <em>club de ajedrez</em></h2>
+          <div class="div"></div>
+          <p style="color:var(--g600);line-height:1.85;margin-bottom:18px;font-size:.97rem">El Club AjedreZ14 nació de una convicción simple pero poderosa: que el ajedrez, cuando se practica con propósito, se convierte en un motor de transformación humana. Somos una comunidad comprometida no solo con el juego, sino con el desarrollo integral de quienes lo practican.</p>
+          <p style="color:var(--g600);line-height:1.85;margin-bottom:18px;font-size:.97rem">Operamos en la Zona 14 de la Ciudad de Guatemala, bajo la premisa de que cada vecino merece acceso a espacios que estimulen su mente, forjen su carácter y amplíen su visión del mundo.</p>
+          <p style="color:var(--g600);line-height:1.85;font-size:.97rem">Nos reunimos cada <strong style="color:var(--gdp)">martes a las 17:00 horas</strong> en el <strong style="color:var(--gdp)">Centro Comercial La Noria</strong>, creando semana a semana una comunidad más fuerte, más lúcida y más unida.</p>
+        </div>
+        <div style="position:relative">
+          <div class="pframe"><div class="pph"><div class="ico">♛</div><p class="lbl2">[ Fotografía grupal del club AjedreZ14 ]</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mvv">
+    <div class="con">
+      <span class="lbl">Misión · Visión · Propósito</span>
+      <h2 class="hsc">Los tres pilares que <em>nos guían</em></h2>
+      <div class="div"></div>
+      <div class="mvvg">
+        <div class="mvvc"><div class="mi">🎯</div><h3>Misión</h3><p>Promover la práctica y difusión del ajedrez en la Zona 14, siendo agentes de cambio comprometidos con el bienestar comunitario, el desarrollo cognitivo de la juventud y el fortalecimiento de valores humanos fundamentales a través del juego más noble.</p></div>
+        <div class="mvvc"><div class="mi">🌟</div><h3>Visión</h3><p>Ser el club de ajedrez de referencia en Guatemala, reconocido por la excelencia de sus jugadores, la solidez de sus valores y su contribución social — con la ambición de representar a Guatemala en torneos mundiales y llevar el nombre del país al más alto nivel internacional.</p></div>
+        <div class="mvvc"><div class="mi">💡</div><h3>Propósito</h3><p>Demostrar que el orden y la disciplina que forja el ajedrez son fuerzas transformadoras capaces de superar cualquier limitación, y que cada joven que aprende a mover una pieza está aprendiendo a moverse con propósito por la vida.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="con">
+      <div class="stg">
+        <div style="position:relative"><div class="pframe"><div class="pph"><div class="ico">♞</div><p class="lbl2">[ Historia visual del club: primeras sesiones ]</p></div></div></div>
+        <div class="stt">
+          <span class="lbl">Nuestra Historia</span>
+          <h2 class="hsc">Del primer movimiento<br>al <em>impacto real</em></h2>
+          <div class="div"></div>
+          <p>El Club AjedreZ14 comenzó con una idea y algunas piezas de ajedrez sobre una mesa. La visión era clara: llevar el ajedrez a quienes más lo necesitan — jóvenes en busca de dirección, familias en busca de actividades de valor, y una comunidad en busca de identidad.</p>
+          <p>Lo que empezó como reuniones informales en la Zona 14 fue creciendo semana a semana, martes a martes, jugador a jugador. Hoy somos una organización sin fines de lucro con estructura, compromiso y una visión que mira al mundo.</p>
+          <p>Nuestra meta más ambiciosa: organizar y ganar dos torneos mundiales de ajedrez representando a Guatemala — y demostrar que el talento no conoce fronteras cuando se cultiva con disciplina y pasión.</p>
+          <button class="btn bgrn" style="margin-top:16px" onclick="showPage('impact')">Ver Nuestro Impacto →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="motto">
+    <div class="mdcr"></div><div class="mche"></div>
+    <div class="minn">
+      <div class="mtop"><div class="mline"></div><div class="mpiec">♟</div><div class="mline"></div></div>
+      <span class="lbl lt" style="margin-bottom:28px">Nuestro Lema</span>
+      <div class="mquo">"<em>El orden</em> y <em>la disciplina,</em><br>eventualmente vencerán<br>a la habilidad y a <strong>la inteligencia.</strong>"</div>
+      <div style="width:60px;height:2px;background:var(--gp);margin:28px auto;border-radius:2px"></div>
+      <div class="mby">— Club de Ajedrez AjedreZ14 · Zona 14, Guatemala</div>
+      <p class="mdesc">Este lema es nuestra promesa: no importa cuánto talento natural poseas — la constancia, el método y la disciplina son las verdaderas fuerzas que determinan quién llega más lejos en el tablero y en la vida.</p>
+    </div>
+  </section>
+
+  <section id="values">
+    <div class="con">
+      <span class="lbl">Pilares Fundamentales</span>
+      <h2 class="hsc">Los valores que mueven <em>nuestras piezas</em></h2>
+      <div class="div"></div>
+      <div class="valg">
+        <div class="valc"><div class="vnum">01</div><div class="vbod"><h4>Orden</h4><p>Cada pieza tiene su lugar. Cada acción, sus consecuencias. Practicamos el orden no solo en el tablero, sino en nuestra vida, organización y relación con la comunidad.</p></div></div>
+        <div class="valc"><div class="vnum">02</div><div class="vbod"><h4>Disciplina</h4><p>La mejora no ocurre por accidente. Nos comprometemos con la práctica regular, el estudio continuo y la perseverancia ante los errores — porque en el ajedrez y en la vida, rendirse no es opción.</p></div></div>
+        <div class="valc"><div class="vnum">03</div><div class="vbod"><h4>Respeto</h4><p>Se respeta al adversario, se respetan las reglas, se respeta el proceso. El ajedrez es una escuela de cortesía, humildad y reconocimiento del mérito ajeno.</p></div></div>
+        <div class="valc"><div class="vnum">04</div><div class="vbod"><h4>Comunidad</h4><p>Somos más fuertes juntos. Cada nuevo miembro enriquece al club; cada victoria del club enriquece a la Zona 14. Nuestro éxito es el éxito de nuestra comunidad.</p></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- =================== PAGE: IMPACT =================== -->
+<div class="page" id="page-impact">
+  <div class="phero">
+    <div class="phbg"></div><div class="phpat"></div>
+    <div class="phdco">♜</div>
+    <div class="phcon">
+      <span class="lbl lt">Nuestro Impacto</span>
+      <h1>El ajedrez como motor<br>de <em>cambio social</em></h1>
+      <p>Cada partida jugada es una inversión en el futuro de Guatemala. Conoce por qué apoyar a AjedreZ14 importa.</p>
+    </div>
+  </div>
+
+  <section id="impd">
+    <div class="con">
+      <div style="max-width:680px;margin-bottom:60px">
+        <span class="lbl">Ciencia y Propósito</span>
+        <h2 class="hsc">Lo que el ajedrez hace<br>por <em>nuestra juventud</em></h2>
+        <div class="div"></div>
+        <p class="lead">La investigación científica respalda lo que vivimos cada martes: el ajedrez no es solo un juego — es una herramienta de desarrollo humano sin igual.</p>
+      </div>
+      <div class="iblo">
+        <div class="iblk"><div class="iico">🧠</div><div><h3>Desarrollo Cognitivo Integral</h3><p>El ajedrez activa ambos hemisferios cerebrales, mejorando la memoria, la atención y el razonamiento abstracto. Jugadores regulares obtienen mejores rendimientos académicos en matemáticas y lectura comprensiva.</p></div></div>
+        <div class="iblk"><div class="iico">💪</div><div><h3>Resiliencia y Fortaleza Emocional</h3><p>Perder una partida y levantarse a jugar la siguiente requiere madurez emocional. Nuestros jóvenes aprenden que el fracaso es información, no derrota — una lección que les acompañará toda la vida.</p></div></div>
+        <div class="iblk"><div class="iico">🎯</div><div><h3>Pensamiento Estratégico Avanzado</h3><p>La planificación a largo plazo, la evaluación de riesgos y la adaptación a situaciones cambiantes son habilidades que el ajedrez cultiva de manera natural y que el mercado laboral del siglo XXI valora enormemente.</p></div></div>
+        <div class="iblk"><div class="iico">🤝</div><div><h3>Valores y Ciudadanía</h3><p>El ajedrez es una escuela de ética: se gana con mérito, se pierde con gracia. En un país que necesita ciudadanos íntegros, cultivar estos valores desde la infancia es una inversión en la Guatemala que queremos ser.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comm">
+    <div class="cmbg"></div>
+    <div class="con">
+      <div class="cmg">
+        <div>
+          <span class="lbl lt">Impacto Comunitario</span>
+          <h2 class="hsc lt">Un club, una comunidad <em>transformada</em></h2>
+          <div class="div"></div>
+          <p class="lead lt">Más allá del tablero, AjedreZ14 es un punto de encuentro, un espacio seguro y una fuente de oportunidades para la Zona 14.</p>
+          <p style="color:rgba(255,255,255,.58);margin-top:18px;line-height:1.85;font-size:.95rem">Cada sesión semanal reúne a jóvenes, adultos y familias en un ambiente de aprendizaje y compañerismo. Creamos lazos sociales fuertes, ofrecemos mentoría y abrimos ventanas al mundo de la competencia internacional.</p>
+          <button class="btn bgld" style="margin-top:32px" onclick="showPage('donations')">Apoya Este Impacto →</button>
+        </div>
+        <div class="csg">
+          <div class="csc"><div class="csn">50+</div><div class="csl">Jugadores activos en nuestra comunidad</div></div>
+          <div class="csc"><div class="csn">52</div><div class="csl">Sesiones anuales de práctica y formación</div></div>
+          <div class="csc"><div class="csn">100%</div><div class="csl">Sin fines de lucro · Fondos reinvertidos</div></div>
+          <div class="csc"><div class="csn">2</div><div class="csl">Torneos mundiales en la mira de Guatemala</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testi">
+    <div class="con">
+      <div class="tesw">
+        <span class="lbl">Historias Reales</span>
+        <h2 class="hsc" style="margin-bottom:48px">Por qué esto <em>importa</em></h2>
+        <div class="tesc"><span class="tqico">"</span><p>Cuando mi hijo llegó al club, no era capaz de concentrarse más de diez minutos en sus tareas. Hoy, a los tres meses, planifica sus estudios con una claridad que me asombra. El ajedrez no solo le enseñó a mover piezas — le enseñó a pensar.</p><div class="tau">— Padre de jugador, Zona 14</div></div>
+        <div class="tesc"><span class="tqico">"</span><p>AjedreZ14 me dio un lugar al que pertenecer, un reto que superar cada semana y una comunidad que me impulsa a ser mejor. El ajedrez me enseñó que cada problema tiene solución si eres lo suficientemente paciente para encontrarla.</p><div class="tau">— Joven jugadora del club</div></div>
+        <div class="tesc"><span class="tqico">"</span><p>Como empresa, buscamos apoyar iniciativas que formen el capital humano del futuro. AjedreZ14 hace exactamente eso: toma a jóvenes con potencial y los equipa con las herramientas mentales que el siglo XXI demanda.</p><div class="tau">— Representante de empresa patrocinadora</div></div>
+        <p style="text-align:center;font-size:.72rem;color:var(--g400);font-style:italic;margin-top:8px">* Testimonios representativos. Se incorporarán testimonios reales con autorización de los miembros.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="vme"></div><div class="vct"></div>
+    <div class="vin">
+      <span class="troph">🏆</span>
+      <span class="lbl gld">Visión 2025 – 2030</span>
+      <h2 class="hsc lt">Guatemala en el<br>mundo del ajedrez</h2>
+      <div class="div" style="justify-content:center;margin:14px auto"></div>
+      <p>Nuestra visión a largo plazo es clara y audaz: organizar y ganar dos torneos mundiales de ajedrez representando a Guatemala. No como un sueño distante, sino como una meta concreta que se construye martes a martes, pieza a pieza, con el apoyo de quienes creen en el potencial de nuestra juventud.</p>
+      <p>El camino al podio mundial comienza aquí, en la Zona 14, con cada donación que financia una inscripción y con cada patrocinador que pone su nombre detrás de un jugador.</p>
+      <div class="vbtns">
+        <button class="btn bgld" onclick="showPage('donations')">Ser Parte del Camino →</button>
+        <button class="btn bout" onclick="showPage('contact')">Contáctanos</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- =================== PAGE: DONATIONS =================== -->
+<div class="page" id="page-donations">
+  <div class="phero">
+    <div class="phbg"></div><div class="phpat"></div>
+    <div class="phdco">♝</div>
+    <div class="phcon">
+      <span class="lbl lt">Donaciones y Patrocinios</span>
+      <h1>Tu apoyo mueve<br>las <em>piezas correctas</em></h1>
+      <p>Cada aporte, grande o pequeño, financia el futuro de jóvenes que merecen una oportunidad extraordinaria.</p>
+    </div>
+  </div>
+
+  <section id="whyd">
+    <div class="con">
+      <div class="whyg">
+        <div class="whyt">
+          <span class="lbl">¿Por Qué Donar?</span>
+          <h2 class="hsc">Tu donación es un <em>movimiento de apertura</em></h2>
+          <div class="div"></div>
+          <p>El Club AjedreZ14 opera como organización sin fines de lucro. Eso significa que cada quetzal que recibes va directamente a lo que importa: los jóvenes, su formación y su futuro.</p>
+          <p>Tu apoyo financiero nos permite mantener el club activo, adquirir materiales, inscribir jugadores en torneos regionales e internacionales, y construir el programa de formación más sólido que Guatemala haya tenido en ajedrez.</p>
+          <ul class="wlist">
+            <li><div class="wchk">✓</div> Financia sets de ajedrez y materiales didácticos para nuevos jugadores</li>
+            <li><div class="wchk">✓</div> Cubre inscripciones a torneos locales, nacionales e internacionales</li>
+            <li><div class="wchk">✓</div> Sostiene el espacio semanal de práctica y formación en La Noria</li>
+            <li><div class="wchk">✓</div> Apoya viajes y logística para competencias internacionales</li>
+            <li><div class="wchk">✓</div> Paga honorarios de entrenadores y mentores especializados</li>
+            <li><div class="wchk">✓</div> Permite que el club sea completamente gratuito para los jóvenes</li>
+          </ul>
+          <button class="btn bpri" onclick="showPage('contact')">Hablar con el Club →</button>
+        </div>
+        <div>
+          <div class="pframe" style="aspect-ratio:4/5"><div class="pph"><div class="ico">♝</div><p class="lbl2">[ Imagen: joven jugador con set de ajedrez donado ]</p></div></div>
+          <div class="tbox">
+            <p>"El 100% de las donaciones recibidas se destinan directamente a programas del club. Somos transparentes con cada movimiento de fondos."</p>
+            <span class="tsig">— Directiva Club AjedreZ14</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plat">
+    <div class="con">
+      <div style="text-align:center;max-width:580px;margin:0 auto">
+        <span class="lbl">Cómo Donar</span>
+        <h2 class="hsc">Elige tu <em>plataforma preferida</em></h2>
+        <div class="div" style="justify-content:center;margin:14px auto 20px"></div>
+        <p class="lead" style="margin:0 auto">Donaciones seguras, simples y con el impacto directo que mereces ver.</p>
+      </div>
+      <div class="platg">
+        <div class="platc"><div class="plogo">💙</div><h3>PayPal</h3><p>La forma más segura y ampliamente aceptada de donar internacionalmente. Acepta tarjetas de crédito y débito de cualquier parte del mundo.</p><button class="btn bdrk" style="width:100%;justify-content:center">Próximamente</button><p style="font-size:.7rem;color:var(--g400);margin-top:12px">* Link de donación en configuración</p></div>
+        <div class="platc"><div class="plogo">🟢</div><h3>GoFundMe</h3><p>Campaña abierta para objetivos específicos: torneos, equipamiento o programas de formación con metas claras y seguimiento en tiempo real.</p><button class="btn bdrk" style="width:100%;justify-content:center">Próximamente</button><p style="font-size:.7rem;color:var(--g400);margin-top:12px">* Campaña en preparación</p></div>
+      </div>
+      <p style="text-align:center;margin-top:28px;font-size:.88rem;color:var(--g600)">¿Prefieres transferencia bancaria? <a onclick="showPage('contact')" style="color:var(--gd);text-decoration:underline;cursor:pointer;font-weight:700">Contáctanos</a> y te enviamos los datos.</p>
+    </div>
+  </section>
+
+  <section id="tiers">
+    <div class="con">
+      <div class="tierh">
+        <span class="lbl">Patrocinios Corporativos</span>
+        <h2 class="hsc">Elige tu <em>nivel de impacto</em></h2>
+        <div class="div" style="justify-content:center;margin:14px auto 18px"></div>
+        <p class="lead" style="margin:0 auto">Ser patrocinador de AjedreZ14 no es solo un acto de generosidad — es una inversión estratégica en visibilidad de marca, RSE y capital humano para Guatemala.</p>
+      </div>
+      <div class="tierg">
+        <div class="tierc">
+          <div class="tmed">🥉</div>
+          <div class="tnam">Patrocinador Bronce</div>
+          <div class="tpri">Q 500</div>
+          <div class="tper">por mes · mínimo 3 meses</div>
+          <ul class="tfl">
+            <li><div class="tck">✓</div> Logo en el sitio web del club</li>
+            <li><div class="tck">✓</div> Mención en redes sociales (1×/mes)</li>
+            <li><div class="tck">✓</div> Certificado de patrocinio digital</li>
+            <li><div class="tck">✓</div> Informe trimestral de impacto</li>
+          </ul>
+          <button class="btn bgrn" style="width:100%;justify-content:center" onclick="showPage('contact')">Convertirme en Patrocinador</button>
+        </div>
+        <div class="tierc feat">
+          <div class="tpop">★ Más Popular</div>
+          <div class="tmed">🥈</div>
+          <div class="tnam">Patrocinador Plata</div>
+          <div class="tpri">Q 1,500</div>
+          <div class="tper">por mes · mínimo 3 meses</div>
+          <ul class="tfl">
+            <li><div class="tck">✓</div> Todo lo del nivel Bronce</li>
+            <li><div class="tck">✓</div> Logo en material impreso del club</li>
+            <li><div class="tck">✓</div> Mención en redes sociales (2×/mes)</li>
+            <li><div class="tck">✓</div> Espacio en banner físico en sesiones</li>
+            <li><div class="tck">✓</div> Invitación a evento anual del club</li>
+            <li><div class="tck">✓</div> Informe mensual de impacto detallado</li>
+          </ul>
+          <button class="btn bpri" style="width:100%;justify-content:center" onclick="showPage('contact')">Convertirme en Patrocinador</button>
+        </div>
+        <div class="tierc">
+          <div class="tmed">🥇</div>
+          <div class="tnam">Patrocinador Oro</div>
+          <div class="tpri">Q 3,500</div>
+          <div class="tper">por mes · mínimo 6 meses</div>
+          <ul class="tfl">
+            <li><div class="tck">✓</div> Todo lo del nivel Plata</li>
+            <li><div class="tck">✓</div> Naming en torneos internos</li>
+            <li><div class="tck">✓</div> Logo en camisetas del club</li>
+            <li><div class="tck">✓</div> Publicación semanal en redes</li>
+            <li><div class="tck">✓</div> Perfil destacado en sitio web</li>
+            <li><div class="tck">✓</div> Representación en torneos internacionales</li>
+            <li><div class="tck">✓</div> Acceso a datos de impacto completo</li>
+          </ul>
+          <button class="btn bgld" style="width:100%;justify-content:center" onclick="showPage('contact')">Patrocinio Oro</button>
+        </div>
+      </div>
+      <div class="tcubox">
+        <h3>¿Interesado en un patrocinio personalizado?</h3>
+        <p>Podemos diseñar un paquete a la medida de tus objetivos de RSE y visibilidad de marca. Hablemos y construyamos algo especial juntos.</p>
+        <button class="btn bgld" onclick="showPage('contact')">Contactar al Club →</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="trust">
+    <div class="con">
+      <div style="text-align:center">
+        <span class="lbl">Confianza y Transparencia</span>
+        <h2 class="hsc">Tu inversión, <em>protegida y visible</em></h2>
+        <div class="div" style="justify-content:center;margin:14px auto"></div>
+      </div>
+      <div class="trustg">
+        <div class="triti"><span class="trico">🔍</span><h4>Transparencia Total</h4><p>Publicamos informes periódicos de uso de fondos. Cada quetzal tiene destino conocido y documentado. Nada se oculta.</p></div>
+        <div class="triti"><span class="trico">📋</span><h4>Organización Sin Fines de Lucro</h4><p>Somos una organización estructurada, comprometida con el cumplimiento legal y con la rendición de cuentas a nuestra comunidad.</p></div>
+        <div class="triti"><span class="trico">📊</span><h4>Reportes de Impacto</h4><p>Patrocinadores y donantes reciben reportes regulares con métricas reales: jugadores activos, torneos participados y resultados obtenidos.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- =================== PAGE: CONTACT =================== -->
+<div class="page" id="page-contact">
+  <div class="phero">
+    <div class="phbg"></div><div class="phpat"></div>
+    <div class="phdco">♚</div>
+    <div class="phcon">
+      <span class="lbl lt">Contacto</span>
+      <h1>Hablemos y movamos<br>las piezas <em>juntos</em></h1>
+      <p>Visítanos, escríbenos o llámanos. Siempre hay un lugar para ti en el tablero de AjedreZ14.</p>
+    </div>
+  </div>
+
+  <section id="contm">
+    <div class="con">
+      <div class="contg">
+        <div>
+          <span class="lbl">Información del Club</span>
+          <h2 class="hsc" style="margin-bottom:28px">Encuéntranos</h2>
+          <div class="citem"><div class="cico">📍</div><div class="ctxt"><h4>Ubicación</h4><p>Centro Comercial La Noria<br>Zona 14, Ciudad de Guatemala</p></div></div>
+          <div class="citem"><div class="cico">🕔</div><div class="ctxt"><h4>Horario de Sesiones</h4><p>Todos los martes · 17:00 horas<br>¡Entrada libre! Solo trae las ganas.</p></div></div>
+          <div class="citem"><div class="cico">🌐</div><div class="ctxt"><h4>Sitio Web</h4><p>www.ajedrez14.aaf.org.gt</p></div></div>
+          <div class="citem"><div class="cico">📧</div><div class="ctxt"><h4>Correo Electrónico</h4><p>info@ajedrez14.aaf.org.gt<br>Para consultas, donaciones y patrocinios</p></div></div>
+          <div class="fvb"><h4>📌 ¿Primera vez visitando?</h4><p>No se requiere experiencia ni materiales propios. Llega cualquier martes a las 17:00 al Centro Comercial La Noria y te recibiremos con los brazos abiertos — y con un tablero listo.</p></div>
+        </div>
+        <div class="fwrap">
+          <h3>Envíanos un Mensaje</h3>
+          <p>Escríbenos sobre membresía, patrocinios, donaciones o simplemente para conocernos mejor. Te respondemos en menos de 48 horas.</p>
+          <div class="fg"><label for="cn">Nombre Completo *</label><input type="text" id="cn" placeholder="Tu nombre completo"></div>
+          <div class="frow">
+            <div class="fg"><label for="ce">Correo Electrónico *</label><input type="email" id="ce" placeholder="tu@correo.com"></div>
+            <div class="fg"><label for="cp">Teléfono / WhatsApp</label><input type="tel" id="cp" placeholder="+502 0000-0000"></div>
+          </div>
+          <div class="fg">
+            <label for="cs">Motivo de Contacto *</label>
+            <select id="cs">
+              <option value="">Selecciona una opción...</option>
+              <option value="m">Quiero unirme al club</option>
+              <option value="d">Información sobre donaciones</option>
+              <option value="p">Patrocinio corporativo</option>
+              <option value="pr">Prensa y medios</option>
+              <option value="o">Otro</option>
+            </select>
+          </div>
+          <div class="fg"><label for="cm">Mensaje *</label><textarea id="cm" placeholder="Cuéntanos en qué podemos ayudarte o cómo te gustaría participar en AjedreZ14..."></textarea></div>
+          <button class="btn bpri" style="width:100%;justify-content:center" onclick="submitForm()">♟ Enviar Mensaje</button>
+          <p style="font-size:.72rem;color:var(--g400);margin-top:14px;text-align:center">Tu información es confidencial. No la compartimos con terceros.</p>
+          <div id="fsuc"><p>✓ ¡Mensaje enviado con éxito! Te contactaremos pronto.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0">
+    <div class="maph">
+      <div class="me">🗺️</div>
+      <p>Centro Comercial La Noria · Zona 14 · Ciudad de Guatemala</p>
+      <a href="https://maps.google.com/?q=Centro+Comercial+La+Noria+Zona+14+Guatemala" target="_blank">Ver en Google Maps →</a>
+    </div>
+  </section>
+
+  <section id="wacta">
+    <div class="con">
+      <div class="wain">
+        <h2>¿Prefieres escribirnos directo?</h2>
+        <p>Estamos disponibles por WhatsApp para responder tus dudas de forma rápida y personalizada. Ya sea para donar, patrocinar o simplemente conocer el club.</p>
+        <button class="bwa" onclick="openWhatsApp()">💬 Escribir por WhatsApp</button>
+        <p style="margin-top:16px;font-size:.72rem;color:rgba(255,255,255,.25)">* Actualiza con el número real de WhatsApp del club antes de publicar</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="social">
+    <div class="con">
+      <span class="lbl">Síguenos</span>
+      <h2 class="hsc" style="margin-bottom:8px">Conéctate con <em>AjedreZ14</em></h2>
+      <p class="lead" style="margin:0 auto">Síguenos en redes sociales para estar al día con torneos, noticias y el poder del ajedrez.</p>
+      <div class="sorow">
+        <div class="sobt">📘 Facebook</div>
+        <div class="sobt">📷 Instagram</div>
+        <div class="sobt">🐦 X / Twitter</div>
+        <div class="sobt">▶️ YouTube</div>
+        <div class="sobt">💼 LinkedIn</div>
+      </div>
+      <p style="margin-top:16px;font-size:.72rem;color:var(--g400);font-style:italic">* Añade los links reales a tus perfiles antes de publicar</p>
+    </div>
+  </section>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="con">
+    <div class="footg">
+      <div class="fbrand">
+        <div class="nlogo" onclick="showPage('home')" style="cursor:pointer;margin-bottom:10px"><div class="nemb">♟</div><span class="ntxt">Ajedre<span>Z14</span></span></div>
+        <p>Una comunidad de ajedrez comprometida con el bienestar, el desarrollo cognitivo y los valores de la Zona 14, Guatemala. Organizados para cambiar vidas, un tablero a la vez.</p>
+        <p style="font-size:.75rem;color:rgba(255,255,255,.25)">www.ajedrez14.aaf.org.gt</p>
+      </div>
+      <div class="fcol"><h4>Páginas</h4><ul><li><a onclick="showPage('home')">Inicio</a></li><li><a onclick="showPage('about')">Quiénes Somos</a></li><li><a onclick="showPage('impact')">Impacto</a></li><li><a onclick="showPage('donations')">Donaciones</a></li><li><a onclick="showPage('contact')">Contacto</a></li></ul></div>
+      <div class="fcol"><h4>Apoyar</h4><ul><li><a onclick="showPage('donations')">Hacer una Donación</a></li><li><a onclick="showPage('donations')">Patrocinio Bronce</a></li><li><a onclick="showPage('donations')">Patrocinio Plata</a></li><li><a onclick="showPage('donations')">Patrocinio Oro</a></li><li><a onclick="showPage('contact')">Patrocinio Personalizado</a></li></ul></div>
+      <div class="fcol"><h4>Contacto</h4><ul><li><a>📍 CC La Noria, Zona 14</a></li><li><a>🕔 Martes · 17:00 hrs</a></li><li><a>📧 info@ajedrez14.aaf.org.gt</a></li><li><a onclick="openWhatsApp()">💬 WhatsApp</a></li></ul></div>
+    </div>
+    <div class="fbot">
+      <p>© 2025 Club de Ajedrez AjedreZ14. Todos los derechos reservados. Organización sin fines de lucro.</p>
+      <span class="fmot">El orden y la disciplina, eventualmente vencerán.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function showPage(p){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  const t=document.getElementById('page-'+p);
+  if(t)t.classList.add('active');
+  document.querySelectorAll('.nlinks a[data-page]').forEach(a=>a.classList.toggle('active',a.dataset.page===p));
+  document.getElementById('mmenu').classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(initObs,100);
+}
+function navGo(p){showPage(p)}
+function toggleMenu(){document.getElementById('mmenu').classList.toggle('open')}
+function openWhatsApp(){
+  const n='XXXXXXXXXX';
+  const m=encodeURIComponent('¡Hola! Me interesa conocer más sobre el Club de Ajedrez AjedreZ14.');
+  window.open('https://wa.me/'+n+'?text='+m,'_blank');
+}
+function submitForm(){
+  const n=document.getElementById('cn').value.trim();
+  const e=document.getElementById('ce').value.trim();
+  const m=document.getElementById('cm').value.trim();
+  if(!n||!e||!m){alert('Por favor completa los campos requeridos: Nombre, Correo y Mensaje.');return}
+  document.getElementById('fsuc').style.display='block';
+  ['cn','ce','cp','cm'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('cs').value='';
+}
+function initObs(){
+  const opts={threshold:.12,rootMargin:'0px 0px -36px 0px'};
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){
+        en.target.style.opacity='1';
+        en.target.style.transform='translateY(0)';
+        obs.unobserve(en.target);
+      }
+    });
+  },opts);
+  document.querySelectorAll('.page.active .bcard,.page.active .iblk,.page.active .tierc,.page.active .csc,.page.active .mvvc,.page.active .valc,.page.active .tesc,.page.active .triti,.page.active .platc').forEach((el,i)=>{
+    el.style.opacity='0';el.style.transform='translateY(22px)';
+    el.style.transition=`opacity .55s ${i*.07}s ease,transform .55s ${i*.07}s ease`;
+    obs.observe(el);
+  });
+}
+showPage('home');
+</script>
+</body>
+</html>
